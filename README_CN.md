@@ -25,3 +25,6 @@
 [@congshengwu](https://github.com/congshengwu)
 
 [@RengeRenge](https://github.com/RengeRenge)
+## 注意
+\src\components\Echarts\renderChart.js文件进行了针对性修改
+修改了click事件点击获取相应像素点的柱状图列数，发送到RN；添加的mousemove一样
