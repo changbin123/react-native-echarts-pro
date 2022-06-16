@@ -1,6 +1,6 @@
 {
-  "name": "react-native-echarts-pro",
-  "version": "1.8.4",
+  "name": "react-native-echarts-pro-nkc-app",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/supervons/react-native-echarts-pro"
+    "url": "https://github.com/changbin123/react-native-echarts-pro-nkc-app"
   },
   "keywords": [
     "react-native",
