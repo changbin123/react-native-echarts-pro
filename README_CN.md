@@ -9,7 +9,7 @@
 
 ## 开始
 
-`$ npm install react-native-echarts-pro --save`
+`$ npm install react-native-echarts-pro-nkc-app --save`
 
 在你的RN项目中接入 `echarts` 非常简单，查看 [开始文档](https://supervons.github.io/react-native-echarts-pro-docs/zh-cn/docs/intro)。
 

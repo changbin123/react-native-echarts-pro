@@ -9,7 +9,7 @@ English  [简体中文](/README_CN.md "中文介绍")
 
 ## Getting started
 
-`$ npm install react-native-echarts-pro --save`
+`$ npm install react-native-echarts-pro-nkc-app --save`
 
 It is super easy to `use echarts in react-native`. Have a look at our [Get Started Documentation](https://supervons.github.io/react-native-echarts-pro-docs/docs/intro) and onboard your app within minutes. Our detailed documentation is available as well.
 
