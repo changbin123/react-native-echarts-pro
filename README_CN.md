@@ -26,5 +26,9 @@
 
 [@RengeRenge](https://github.com/RengeRenge)
 ## 注意
+修改一：
 \src\components\Echarts\renderChart.js文件进行了针对性修改
 修改了click事件点击获取相应像素点的柱状图列数，发送到RN；添加的mousemove一样
+修改二：
+在renderChart.js中的addEventListener监听message中添加如下代码，支持formatter的字符串转化函数方式
+option.yAxis.axisLabel.formatter = eval("(" + option.yAxis.axisLabel.formatter + ")");
