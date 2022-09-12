@@ -113,6 +113,7 @@ export default function renderChart(props) {
           // 非图表类点击则执行刷新数据操作
           let option = JSON.parse(event.data);
           option.yAxis.axisLabel.formatter = eval("(" + option.yAxis.axisLabel.formatter + ")");
+          option.xAxis.axisLabel.formatter = eval("(" + option.xAxis.axisLabel.formatter + ")");
           myChart.setOption(option, option.optionSetting);
           // 触发ECharts 中支持的图表行为
           if (option.type === "dispatchAction") {
@@ -136,6 +137,7 @@ export default function renderChart(props) {
       window.document.addEventListener('message', (event) =>{
         let option = JSON.parse(event.data);
         option.yAxis.axisLabel.formatter = eval("(" + option.yAxis.axisLabel.formatter + ")");
+        option.xAxis.axisLabel.formatter = eval("(" + option.xAxis.axisLabel.formatter + ")");
         myChart.setOption(option, option.optionSetting);
         // 触发ECharts 中支持的图表行为
         if(option.type === 'dispatchAction'){
