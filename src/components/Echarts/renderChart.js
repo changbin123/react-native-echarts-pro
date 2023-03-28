@@ -112,8 +112,17 @@ export default function renderChart(props) {
         if (!event.isTrusted) {
           // 非图表类点击则执行刷新数据操作
           let option = JSON.parse(event.data);
-          option.yAxis.axisLabel.formatter = eval("(" + option.yAxis.axisLabel.formatter + ")");
-          option.xAxis.axisLabel.formatter = eval("(" + option.xAxis.axisLabel.formatter + ")");
+          option.yAxis.axisLabel.formatter = function (num) {
+                                            if (num >= 1000000000) {
+                                              return (num / 1000000000).toFixed(0) + 'G';
+                                            } else if (num >= 1000000) {
+                                              return (num / 1000000).toFixed(0) + 'M';
+                                            } else if (num >= 1000) {
+                                              return (num / 1000).toFixed(0) + 'k';
+                                            } else {
+                                              return num.toString();
+                                            }
+                                          };
           myChart.setOption(option, option.optionSetting);
           // 触发ECharts 中支持的图表行为
           if (option.type === "dispatchAction") {
@@ -136,8 +145,17 @@ export default function renderChart(props) {
       // Android Listener
       window.document.addEventListener('message', (event) =>{
         let option = JSON.parse(event.data);
-        option.yAxis.axisLabel.formatter = eval("(" + option.yAxis.axisLabel.formatter + ")");
-        option.xAxis.axisLabel.formatter = eval("(" + option.xAxis.axisLabel.formatter + ")");
+        option.yAxis.axisLabel.formatter = function (num) {
+                                            if (num >= 1000000000) {
+                                              return (num / 1000000000).toFixed(0) + 'G';
+                                            } else if (num >= 1000000) {
+                                              return (num / 1000000).toFixed(0) + 'M';
+                                            } else if (num >= 1000) {
+                                              return (num / 1000).toFixed(0) + 'k';
+                                            } else {
+                                              return num.toString();
+                                            }
+                                          };
         myChart.setOption(option, option.optionSetting);
         // 触发ECharts 中支持的图表行为
         if(option.type === 'dispatchAction'){
